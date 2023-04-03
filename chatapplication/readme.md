@@ -1,11 +1,12 @@
 # Chat Application
 
-## FrameWork and Language Used
-- SpringBoot
-- Java
+## Project overview
+- Developed a Java-Spring Boot project using Maven, creating REST APIs, and testing them with POSTMAN. Utilising REST APIs, it was possible to enable conversation between two users and connected to MySQL Database to save the chats
 
-## DataBase Used
-- MySql
+## Tech Stack
+- Java
+- Spring Boot
+- MySQL
 
 ## Controller
 - UserController
@@ -27,9 +28,6 @@
 - StatusRepository
 - ChatRepository
 
-## Project Summary
-- Here in this project we are performing CRUD operations and making possible to have conversation between two users 
-  personally and saving the Data in the DataBase and as follows :
 
   ### User
   - PostMapping   -> http://localhost:8080/api/v1/user/create-user
@@ -44,3 +42,6 @@
   - PostMapping   -> http://localhost:8080/api/v1/chat/send-message
   - GetMapping    -> http://localhost:8080/api/v1/chat/get-chat?userId=1 (Get Chats By UserId)
   - GetMapping    -> http://localhost:8080/api/v1/chat/get-conversation?user1=1&user2=3 (Get Conversation by Users UserId)
+  
+  ## Contributing
+- If you would like to contribute to this project, please open a pull request.
