@@ -1,47 +1,54 @@
-# Online Chat Tool
-
-## Project overview
-- Developed a Java-Spring Boot project using Maven, creating REST APIs, and testing them with POSTMAN. Utilising REST APIs, it was possible to enable conversation between two users and connected to MySQL Database to save the chats
-
+#  Chat Sphere
+## Project Overview
+- The online chat tool is a Java-Spring Boot project that allows for user registration and interaction in a chat room setting. The project 
+  uses REST APIs and MySQL database to create, read, update, and delete user information.
+  
 ## Tech Stack
 - Java
 - Spring Boot
-- MySQL
+- MySQL  
 
-## Controller
-- UserController
-- StatusController
-- ChatHistoryController
+## Setup
+- Clone the project from the GitHub repository.
+- Install the necessary dependencies by running the command mvn clean install.
+- Create a MySQL database named chat_application and update the database credentials in src/main/resources/application.properties.
+- start the Spring Boot application by running the command mvn spring-boot:run
 
-## Service
-- UserService
-- StatusService
-- ChatHistoryService
+## API Endpoints
 
-## Model
-- User
-- Status
-- ChatHistory
-
-## Repository
-- UserRepository
-- StatusRepository
-- ChatRepository
-
-
-  ### User
-  - PostMapping   -> http://localhost:8080/api/v1/user/create-user
-  - PostMapping   -> http://localhost:8080/api/v1/user/login (To Login)
-  - GetMapping    -> http://localhost:8080/api/v1/user/get-users
-  - DeleteMapping -> http://localhost:8080/api/v1/user/delete-user/6 
-
-  ### Status
-  - PostMapping   -> http://localhost:8080/api/v1/status/create-status
-
-  ### ChatHistory
-  - PostMapping   -> http://localhost:8080/api/v1/chat/send-message
-  - GetMapping    -> http://localhost:8080/api/v1/chat/get-chat?userId=1 (Get Chats By UserId)
-  - GetMapping    -> http://localhost:8080/api/v1/chat/get-conversation?user1=1&user2=3 (Get Conversation by Users UserId)
+  ### User Endpoints
+  - PostMapping -> http://localhost:8080/create-user
+  - PostMapping -> http://localhost:8080/login (To Login)
+  - GetMapping -> http://localhost:8080/get-users
+  - DeleteMapping -> http://localhost:8080/delete-user/2
+  - PutMapping ->http://localhost:8080/update-user/{userId}
   
-  ## Contributing
-- If you would like to contribute to this project, please open a pull request.
+  ### Status
+  - PostMapping -> http://localhost:8080/create-status
+  
+  ### ChatHistory
+  - PostMapping -> http://localhost:8080/send-message
+  - GetMapping -> http://localhost:8080/getbysenderid/{senderid} (Get Chats By UserId)
+  - GetMapping -> http://localhost:8080/getbysenderandreceiverid?user1=1&user2=4 (Get Conversation by Users UserId)
+  
+## Testing with POSTMAN
+- Open POSTMAN and import the Chat Application.postman_collection.json file included in the project repository.
+- The collection includes all API endpoints for testing the CRUD operations on user, chat room and message data.
+- You can use the provided sample JSON requests to test the APIs.  
+
+## Conclusion
+- The Online chat tool is a Java-Spring Boot project that provides an efficient way to create a chat room and enable user interaction in a 
+  chat room setting. The use of REST APIs and MySQL database make it a robust and scalable system. The ability to add users to chat rooms 
+  and post messages in the chat room make it a valuable tool for communication between users.
+
+
+
+
+
+
+
+
+
+
+
+
