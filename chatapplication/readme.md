@@ -1,4 +1,4 @@
-# Chat Application
+# Online Chat Tool
 
 ## Project overview
 - Developed a Java-Spring Boot project using Maven, creating REST APIs, and testing them with POSTMAN. Utilising REST APIs, it was possible to enable conversation between two users and connected to MySQL Database to save the chats
